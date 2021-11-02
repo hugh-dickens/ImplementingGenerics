@@ -5,10 +5,14 @@ using System.Linq;
 
 namespace WiredBrainCoffee.StorageApp.Repositories
 {
-    public class GenericRepository<T, TKey> where T : class, IEntity
+    public class ListRepository<T> : IRepository<T> where T : IEntity
     {
         private readonly List<T> _items = new List<T>();
 
+        public IEnumerable<T> GetAll()
+        {
+            return _items.ToList();
+        }
         public T GetById(int id)
         {
             return _items.Single(item => item.Id == id);
@@ -26,10 +30,9 @@ namespace WiredBrainCoffee.StorageApp.Repositories
 
         public void Save()
         {
-            foreach (var item in _items)
-            {
-                Console.WriteLine(item);
-            }
+            // Everything is saved already in the List<T>
         }
     }
+
+
 }
