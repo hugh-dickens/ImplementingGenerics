@@ -1,0 +1,13 @@
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.csprojAssemblyReference.cache
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.AssemblyInfoInputs.cache
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.AssemblyInfo.cs
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.csproj.CoreCompileInputs.cache
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\bin\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.exe
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\bin\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.deps.json
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\bin\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.runtimeconfig.json
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\bin\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.runtimeconfig.dev.json
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\bin\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.dll
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\bin\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.pdb
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.dll
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.pdb
+C:\Users\HWD1\Documents\Pluralsight Courses\C# Generics\WiredBrainCoffee.StorageApp\obj\Debug\netcoreapp3.1\WiredBrainCoffee.StorageApp.genruntimeconfig.cache
