@@ -2,23 +2,25 @@ using Microsoft.EntityFrameworkCore;
 using WiredBrainCoffee.StorageApp.Entities;
 using System.Linq;
 using System.Collections.Generic;
+using System;
 
 namespace WiredBrainCoffee.StorageApp.Repositories
 {
-    public delegate void ItemAdded(object item);
 
     public class SqlRepository<T> : IRepository<T> where T : class, IEntity
     {
         private readonly DbContext _dbContext;
-        private readonly DbSet<T> _dbSet;
-        private readonly ItemAdded? _itemAddedCallback;
 
-        public SqlRepository(DbContext dbContext, ItemAdded? itemAddedCallback = null)
+        private readonly DbSet<T> _dbSet;
+        
+
+        public SqlRepository(DbContext dbContext)
         {
             _dbContext = dbContext;
-            _itemAddedCallback = itemAddedCallback;
             _dbSet = _dbContext.Set<T>();
         }
+
+        public event EventHandler<T>? ItemAdded;
 
         public IEnumerable<T> GetAll()
         {
@@ -32,7 +34,7 @@ namespace WiredBrainCoffee.StorageApp.Repositories
         public void Add(T item)
         {
             _dbSet.Add(item);
-            _itemAddedCallback?.Invoke(item);
+            ItemAdded?.Invoke(this, item);
         }
         public void Remove(T item)
         {
