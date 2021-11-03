@@ -9,7 +9,9 @@ namespace WiredBrainCoffee.StorageApp
     {
         static void Main(string[] args)
         {
-            var employeeRepository = new SqlRepository<Employee>(new StorageAppDbContext());
+            var itemAdded = new ItemAdded(EmployeeAdded);
+            var employeeRepository = new SqlRepository<Employee>(new StorageAppDbContext(),
+              itemAdded);
             AddEmployees(employeeRepository);
             AddManagers(employeeRepository);
             GetEmployeeById(employeeRepository);
@@ -22,6 +24,12 @@ namespace WiredBrainCoffee.StorageApp
             WriteAllToConsole(organisationRepository);
 
             Console.ReadLine();
+        }
+
+        private static void EmployeeAdded(object item)
+        {
+            var employee = (Employee)item;
+            Console.WriteLine($"Employee added => {employee.FirstName}");
         }
 
         private static void WriteAllToConsole(IReadRepository<IEntity> repository)
@@ -41,10 +49,14 @@ namespace WiredBrainCoffee.StorageApp
 
         private static void AddEmployees(IRepository<Employee> employeeRepository)
         {
-            employeeRepository.Add(new Employee { FirstName = "Julia" });
-            employeeRepository.Add(new Employee { FirstName = "Anna" });
-            employeeRepository.Add(new Employee { FirstName = "Thomas" });
-            employeeRepository.Save();
+            var employees = new[]
+            {
+                new Employee { FirstName = "Julia" },
+                new Employee { FirstName = "Anna" },
+                new Employee { FirstName = "Thomas" }
+            };
+
+            employeeRepository.AddBatch(employees);
         }
 
         private static void AddManagers(IWriteRepository<Manager> managerRepository)
@@ -57,9 +69,12 @@ namespace WiredBrainCoffee.StorageApp
 
         private static void AddOrganisations(IRepository<Organisation> organisationRepository)
         {
-            organisationRepository.Add(new Organisation { Name = "Pluralsight" });
-            organisationRepository.Add(new Organisation { Name = "Globomantics" });
-            organisationRepository.Save();
+            var organisations = new[]
+            {
+                new Organisation { Name = "Pluralsight" },
+                new Organisation { Name = "Globomantics" }
+            };
+            organisationRepository.AddBatch(organisations);
         }
     }
 }
